@@ -1,15 +1,19 @@
-import React from 'react';
-import { Brain, Twitter, Mail, ArrowUpRight } from 'lucide-react';
-
+import { Twitter, Mail, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 export const Footer = () => {
   return (
     <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-800 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-6 md:mb-0">
-            <Brain size={28} className="text-cyan-400 mr-2" />
+           <motion.img
+                         src="/images/logo.png"
+                         alt="FundedReady"
+                         className="h-12 w-12 transition-all duration-300 group-hover:scale-110"
+                         whileHover={{ rotate: 15 }}
+                       /> 
             <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              FundedReady.ai
+              FundedReady
             </span>
           </div>
           

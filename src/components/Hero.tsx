@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { Sparkles, ArrowRight, Brain, LineChart } from 'lucide-react';
-import { motion } from './Motion';
+import { motion } from 'framer-motion';
+import { TypewriterEffect } from './TypewriterEffect';
+
+const phrases = [
+  'overtrading, failed challenges, rule violations and emotional trading',
+  
+ 
+ 
+];
 
 export const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -21,11 +29,14 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-500 bg-clip-text text-transparent">
-              Your AI Assistant for Prop Firm Success
+            Funded Traders Aren’t Lucky — They’re Ready.
             </h1>
             
             <p className="text-xl text-gray-300 max-w-lg">
-              FundedReady.ai helps you pass challenges, master psychology, and never trade alone again.
+              <span className="text-white font-medium">From</span> <TypewriterEffect phrases={phrases} />
+              <br />
+              <span className="text-white font-medium">to</span> laser-focused trades and real funding. 
+              <span className="text-cyan-400 font-medium"> FundedReady</span> guides you there.
             </p>
             
             <div className="pt-2 space-y-4">
@@ -37,10 +48,12 @@ export const Hero = () => {
                 whileTap={{ scale: 0.97 }}
                 className="relative block w-full sm:w-auto sm:inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-gradient-to-r from-sky-400 to-cyan-500 text-white shadow-lg shadow-sky-500/20 group"
               >
-                <span className="relative z-10 flex items-center">
-                  Get Lifetime Access — $49
-                  <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
+                <div className="relative z-10">
+                  <div className="flex items-center">
+                    Get Lifetime Access — $49
+                    <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
                 <span 
                   className={`absolute inset-0 rounded-lg bg-gradient-to-r from-sky-500 to-cyan-600 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`} 
                 />
@@ -54,9 +67,28 @@ export const Hero = () => {
               </div>
             </div>
             
-            <p className="text-sm text-purple-300 font-medium">
-              Launch deal: Lifetime access for first 500 users only
-            </p>
+            <div className="flex items-center space-x-2">
+              <p className="text-sm text-purple-300 font-medium">
+                Launch deal: Lifetime access for first 500 users only
+              </p>
+              <motion.span 
+                className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-red-900/30 text-red-300 border border-red-500/30 whitespace-nowrap"
+                animate={{
+                  boxShadow: [
+                    '0 0 3px rgba(239, 68, 68, 0.4)',
+                    '0 0 6px rgba(239, 68, 68, 0.6)',
+                    '0 0 3px rgba(239, 68, 68, 0.4)'
+                  ]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                349/500 spots left!
+              </motion.span>
+            </div>
           </motion.div>
           
           <div className="relative order-first md:order-last">
