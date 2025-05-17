@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Hero } from './components/Hero';
 import { PainPoints } from './components/PainPoints';
 import { Solutions } from './components/Solutions';
@@ -7,12 +7,16 @@ import { SocialProof } from './components/SocialProof';
 import { Pricing } from './components/Pricing';
 import { SignupForm } from './components/SignupForm';
 import { Footer } from './components/Footer';
+import { Navbar } from './components/Navbar';
+import { HowItWorks } from './components/HowItWorks';
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 overflow-hidden">
-      <div className="relative z-10">
+      <Navbar />
+      <div className="relative z-10 pt-16">
         <Hero />
+        <HowItWorks />
         <PainPoints />
         <Solutions />
         <DemoTeaser />

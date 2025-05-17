@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Sparkles, ArrowRight, Brain, LineChart } from 'lucide-react';
 import { motion } from './Motion';
 
@@ -13,10 +13,10 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-6"
+            className="space-y-6 relative"
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-800 text-cyan-400 mb-2">
-              <Sparkles size={14} className="mr-2" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full text-base font-medium bg-gray-800/80 text-cyan-400 border border-cyan-400/20 mb-2">
+              <Sparkles size={16} className="mr-2" />
               <span>Limited Time Offer</span>
             </div>
             
