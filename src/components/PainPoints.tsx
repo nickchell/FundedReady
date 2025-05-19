@@ -1,8 +1,14 @@
-import React from 'react';
 import { AlertTriangle, TrendingDown, Brain, Zap } from 'lucide-react';
 import { motion } from './Motion';
 
-const PainPoint = ({ icon, title, stat, description }) => {
+interface PainPointProps {
+  icon: React.ReactNode;
+  title: string;
+  stat: string;
+  description: string;
+}
+
+const PainPoint = ({ icon, title, stat, description }: PainPointProps) => {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}

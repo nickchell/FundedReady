@@ -16,8 +16,8 @@ function App() {
       <Navbar />
       <div className="relative z-10 pt-16">
         <Hero />
-        <HowItWorks />
         <PainPoints />
+        <HowItWorks />
         <Solutions />
         <DemoTeaser />
         <SocialProof />
